@@ -4,6 +4,7 @@
  */
 package com.codideep.app;
 
+import com.codideep.app.form.FrmOperation;
 import com.codideep.app.process.OperationMethodOne;
 import com.codideep.app.process.Operation;
 import com.codideep.app.process.OperationMethodTwo;
@@ -16,14 +17,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        OperationMethodOne operationMethodOne = new OperationMethodOne(1000000);
-        operationMethodOne.start();
+//        OperationMethodOne operationMethodOne = new OperationMethodOne(1000000);
+//        operationMethodOne.start();
+//        
+//        OperationMethodTwo operationMethodTwo = new OperationMethodTwo(1000000);
+//        Thread thread = new Thread(operationMethodTwo);
+//        thread.start();
+//        
+//        Operation operation = new Operation();
+//        operation.printNumbers(100000);
         
-        OperationMethodTwo operationMethodTwo = new OperationMethodTwo(1000000);
-        Thread thread = new Thread(operationMethodTwo);
-        thread.start();
+        FrmOperation frmOperation = new FrmOperation();
         
-        Operation operation = new Operation();
-        operation.printNumbers(100000);
+        frmOperation.setVisible(true);
     }
 }
